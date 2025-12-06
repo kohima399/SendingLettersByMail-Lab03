@@ -26,8 +26,10 @@ namespace SendingLettersByMail.UsersClasses
             throw new Exception("Нельзя вставлять пробелы или пустое значение!") :
             emailPassword;
 
-            emailAdressTo = emailAdressTo ?? throw new ArgumentNullException( nameof(emailAdressTo));
+            EmailAdressTo = emailAdressTo ?? throw new ArgumentNullException(nameof(emailAdressTo));
+           
             Subject = subject ?? throw new ArgumentNullException(nameof(subject));
+            
             Body = body ?? throw new ArgumentNullException(nameof(body));
 
         }
